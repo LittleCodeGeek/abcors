@@ -1,0 +1,25 @@
+{
+    "NAME": "ABookCase Orbital Reference System",
+    "DOWNLOAD": "https://github.com/zentarul/abcors/releases",https://github.com/zentarul/abcors/releases
+    "URL": "https://raw.githubusercontent.com/zentarul/abcors/master/GameData/ABCORS/ABCORS.version",
+    "GITHUB": {
+        "USERNAME": "zentarul",
+        "REPOSITORY": "abcors"
+    },
+    "VERSION": {
+        "MAJOR": 0,
+        "MINOR": 1,
+        "PATCH": 0,
+        "BUILD": 0
+    },
+    "KSP_VERSION_MIN": {
+        "MAJOR": 1,
+        "MINOR": 0,
+        "PATCH": 1
+    },
+    "KSP_VERSION_MAX": {
+        "MAJOR": 1,
+        "MINOR": 0,
+        "PATCH": 99
+    }
+}
