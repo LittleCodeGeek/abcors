@@ -41,7 +41,7 @@ namespace ABCORS
 
             Orbit orbit = _mousedOverPatch.pr.patch;
             Vector3d deltaPos = orbit.getPositionAtUT(_mousedOverPatch.UTatTA) - orbit.referenceBody.position;
-            int altitude = (int)(deltaPos.magnitude - orbit.referenceBody.Radius);
+            double altitude = deltaPos.magnitude - orbit.referenceBody.Radius;
 
             GUILayout.BeginArea(GUIUtility.ScreenToGUIRect(_popup));
             GUILayout.Label("T: " + KSPUtil.PrintTime((int)(Planetarium.GetUniversalTime() - _mousedOverPatch.UTatTA), 5, true) + "\nAlt: " + altitude.ToString("N0", CultureInfo.CurrentCulture) + "m");
