@@ -27,7 +27,7 @@ namespace ABCORS
             if (!_mouseOver)
                 return;
 
-            var updatedLocation = _mousedOverPatch.GetUpdatedScreenPoint();
+            var updatedLocation = _mousedOverPatch.GetScreenSpacePoint();
 
             _popup.center = new Vector2(updatedLocation.x, Screen.height - updatedLocation.y);
         }
