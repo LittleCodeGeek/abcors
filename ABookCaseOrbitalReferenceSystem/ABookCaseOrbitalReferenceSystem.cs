@@ -12,7 +12,7 @@ namespace ABCORS
         private bool _mouseOver = false;
         private PatchedConics.PatchCastHit _mousedOverPatch;
 
-        private Rect _popup = new Rect(0f, 0f, 160f, 88f);
+        private Rect _popup = new Rect(0f, 0f, 160f, 132f);
 
         private void Awake()
         {
@@ -40,11 +40,12 @@ namespace ABCORS
             GUI.skin = HighLogic.Skin;
 
             Orbit orbit = _mousedOverPatch.pr.patch;
-            Vector3d deltaPos = orbit.getPositionAtUT(_mousedOverPatch.UTatTA) - orbit.referenceBody.position;
-            double altitude = deltaPos.magnitude - orbit.referenceBody.Radius;
+			Vector3d pos = orbit.getPositionAtUT(_mousedOverPatch.UTatTA);
+			double altitude = (pos - orbit.referenceBody.position).magnitude - orbit.referenceBody.Radius;
+			double speed = orbit.getOrbitalSpeedAtPos(pos);
 
-            GUILayout.BeginArea(GUIUtility.ScreenToGUIRect(_popup));
-            GUILayout.Label("T: " + KSPUtil.PrintTime((int)(Planetarium.GetUniversalTime() - _mousedOverPatch.UTatTA), 5, true) + "\nAlt: " + altitude.ToString("N0", CultureInfo.CurrentCulture) + "m");
+			GUILayout.BeginArea(GUIUtility.ScreenToGUIRect(_popup));
+			GUILayout.Label("T: " + KSPUtil.PrintTime((int)(Planetarium.GetUniversalTime() - _mousedOverPatch.UTatTA), 5, true) + "\nAlt: " + altitude.ToString("N0", CultureInfo.CurrentCulture) + "m\nVel: " + speed.ToString("N0", CultureInfo.CurrentCulture) + "m/s");
 
             GUILayout.EndArea();
         }
