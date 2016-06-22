@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <int name="displayWidth">160</int>
+    <int name="displayHeight">160</int>
+    <bool name="showTime">1</bool>
+    <bool name="showAltitude">1</bool>
+    <bool name="showSpeed">0</bool>
+    <bool name="showEjectionAngle">0</bool>
+</config>
