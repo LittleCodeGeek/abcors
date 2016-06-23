@@ -2,8 +2,9 @@
 <config>
     <int name="displayWidth">160</int>
     <int name="displayHeight">160</int>
+    <bool name="allowTarget">1</bool>
     <bool name="showTime">1</bool>
     <bool name="showAltitude">1</bool>
     <bool name="showSpeed">0</bool>
-    <bool name="showEjectionAngle">0</bool>
+    <bool name="showAngleToPrograde">0</bool>
 </config>
