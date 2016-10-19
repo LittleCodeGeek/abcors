@@ -36,7 +36,6 @@ namespace ABCORS
             _showAltitude = config.GetValue<bool>("showAltitude", _showAltitude);
             _showSpeed = config.GetValue<bool>("showSpeed", _showSpeed);
             _showAngleToPrograde = config.GetValue<bool>("showAngleToPrograde", _showAngleToPrograde);
-            config.save();
         }
 
         private void Awake()
