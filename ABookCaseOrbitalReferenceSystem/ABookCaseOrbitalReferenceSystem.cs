@@ -110,6 +110,9 @@ namespace ABCORS
             if (FlightGlobals.ActiveVessel == null)
                 return false;
 
+			if (FlightGlobals.ActiveVessel.patchedConicSolver == null)
+				return false;
+
             if (MouseOverVessel(FlightGlobals.ActiveVessel))
             {
                 return true;
