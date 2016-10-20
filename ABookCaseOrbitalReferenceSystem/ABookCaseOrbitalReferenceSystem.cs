@@ -107,11 +107,8 @@ namespace ABCORS
             _hitOrbit = null;
             _hitUT = 0;
 
-            if (FlightGlobals.ActiveVessel == null)
+            if (FlightGlobals.ActiveVessel == null || FlightGlobals.ActiveVessel.patchedConicSolver == null)
                 return false;
-
-			if (FlightGlobals.ActiveVessel.patchedConicSolver == null)
-				return false;
 
             if (MouseOverVessel(FlightGlobals.ActiveVessel))
             {
